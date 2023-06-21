@@ -7,7 +7,6 @@ WORKDIR /home/node/app
 
 COPY --chown=node:node ./package.json ./
 RUN npm install
-RUN npm install --save-dev @babel/plugin-proposal-private-property-in-object
 COPY --chown=node:node ./ ./
 
 CMD ["npm", "start"]
